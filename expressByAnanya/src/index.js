@@ -1,5 +1,15 @@
+const path = require('path');
 const express = require('express');
 const app = express();
+//console.log(path.join(__dirname, "../public"));
+
+const staticPath = path.join(__dirname, "../public");
+
+// relative path
+//console.log(__dirname);
+//built in middleware
+app.use(express.static(staticPath));
+
 app.get("/", (req, res) => {
     res.send("<h1> welcome to my home page</h1>");
 }
