@@ -13,4 +13,4 @@ app.get('/', (req, res) => {
 // Thd callback function has 2 parameters, requst(req) and response(res).
 // The request object(req) represents the HTTP request and has properties for the request query string, parameters, body, HTTP headers, etc.
 // Similarly, the response object represents the HTTP response that the Express app sends when it receives an HTTP request.
-app.listen(8000, () => console.log('Listening on port 8000...'));
+app.listen(3000, () => console.log('Listening on port 3000...'));
