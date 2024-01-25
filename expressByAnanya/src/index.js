@@ -4,9 +4,13 @@ const app = express();
 const port = 8000;
 //built in middleware
 const staticPath = path.join(__dirname, "../public");
+const templatePath = path.join(__dirname, "../templates");
 
 // to set the view engine
 app.set('view engine', 'hbs');
+app.set('views', templatePath);
+
+app.use(express.static(staticPath));
 //app.use(express.static(staticPath));
 
 //template engine route
