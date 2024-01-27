@@ -25,9 +25,16 @@ app.get("/", (req, res) => {
     });
 
 app.get("/", (req, res) => {
-    res.send("<h1> welcome to my home page</h1>");
+    res.render("about");
 }
 );
+//usage of '*' for 404 error page is to be used at the end of all the routes
+app.get('*', (req, res) => {
+    res.render('404error', {
+        errorcomment: 'Oops! Page Not Found'
+    });
+});
+
 app.listen(port, () => {
     console.log(`listening to the port no ${port}`);
 });
